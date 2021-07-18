@@ -1,0 +1,58 @@
+{
+  "name": "sam-lambda-layer-test",
+  "description": "Testing to try and get sam-beta-cdk debugging working",
+  "version": "1.0.0",
+  "scripts": {
+    "watch": "tsc -w",
+    "cdk": "cdk",
+    "package": "zip -r lambdas.zip src/* node_modules/*",
+    "api": "tsc && sam-beta-cdk local start-api -d 5858 --warm-containers EAGER",
+    "build": "tsc && sam-beta-cdk build",
+    "synth": "tsc && cdk synth",
+    "deploy": "tsc && cdk synth && cdk deploy --require-approval never",
+    "build-watch": "nodemon --exec sam-beta-cdk build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-typescript": "^7.14.5",
+    "@types/aws-lambda": "^8.10.55",
+    "@types/jest": "^26.0.23",
+    "@types/lodash": "^4.14.168",
+    "@types/node": "10.17.27",
+    "@types/node-fetch": "^2.5.7",
+    "aws-cdk": "^1.111.0",
+    "aws-sdk": "^2.888.0",
+    "babel-jest": "^27.0.6",
+    "chalk": "^4.1.0",
+    "constructs": "^3.3.7",
+    "dotenv": "^8.2.0",
+    "eol": "^0.9.1",
+    "jest": "^26.6.3",
+    "lodash": "^4.17.21",
+    "monocdk": "^1.107.0",
+    "querystring": "^0.2.0",
+    "samwatch": "0.0.25-development",
+    "ts-jest": "^26.2.0",
+    "ts-node": "^9.1.1",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "~3.9.7"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-iam": "^1.102.0",
+    "@aws-cdk/aws-lambda-event-sources": "^1.107.0",
+    "@aws-cdk/aws-ses": "^1.107.0",
+    "axios": "^0.21.1",
+    "csv-parse": "^4.15.1",
+    "csv-stream": "^0.2.0",
+    "https": "^1.0.0",
+    "nanoid": "^3.1.23",
+    "node-fetch": "^2.6.1",
+    "request": "^2.88.2",
+    "xml-js": "^1.6.11"
+  },
+  "engines": {
+    "node": ">=14.15.4",
+    "npm": ">=6.14.10"
+  }
+}
