@@ -6,7 +6,7 @@
     "watch": "tsc -w",
     "cdk": "cdk",
     "package": "zip -r lambdas.zip src/* node_modules/*",
-    "api": "tsc && sam-beta-cdk local start-api -d 5858 --warm-containers EAGER",
+    "api": "tsc && sam-beta-cdk local start-api -d 5858",
     "build": "tsc && sam-beta-cdk build",
     "synth": "tsc && cdk synth",
     "deploy": "tsc && cdk synth && cdk deploy --require-approval never",

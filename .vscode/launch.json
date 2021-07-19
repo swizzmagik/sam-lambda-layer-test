@@ -17,5 +17,15 @@
       "payload": {},
       "environmentVariables": {}
     }
-  }]
+  },
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Attach to SAM Local",
+      "address": "localhost",
+      "port": 5858,
+      "localRoot": "${workspaceRoot}/infrastructure",
+      "remoteRoot": "/var/task",
+      "protocol": "inspector",
+    }]
 }

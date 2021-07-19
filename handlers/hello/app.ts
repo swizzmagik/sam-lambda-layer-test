@@ -7,7 +7,7 @@ export const handler: Handler = async (event: APIGatewayProxyEvent, context: Con
   try {
 
     const response = {
-      message: 'hello world my friend!',
+      message: 'hello pumba',
     };
     console.log(JSON.stringify(response));
 
